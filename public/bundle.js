@@ -27697,32 +27697,82 @@ var React = __webpack_require__(6);
 var _require = __webpack_require__(98),
     NavLink = _require.NavLink;
 
-var Nav = function Nav() {
-  return React.createElement(
-    'div',
-    null,
-    React.createElement(
-      'h2',
-      null,
-      ' Nav component '
-    ),
-    React.createElement(
-      NavLink,
-      { exact: true, to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-      'Get Weather'
-    ),
-    React.createElement(
-      NavLink,
-      { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-      'About'
-    ),
-    React.createElement(
-      NavLink,
-      { to: '/example', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-      'Example'
-    )
-  );
-};
+var Nav = React.createClass({
+  displayName: 'Nav',
+
+  onSearch: function onSearch(e) {
+    e.preventDefault();
+    alert("Not yet setup");
+  },
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'top-bar' },
+      React.createElement(
+        'div',
+        { className: 'top-bar-left' },
+        React.createElement(
+          'ul',
+          { className: 'menu' },
+          React.createElement(
+            'li',
+            { className: 'menu-text' },
+            'Weather Check'
+          ),
+          React.createElement(
+            'li',
+            null,
+            React.createElement(
+              NavLink,
+              { exact: true, to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+              'Get Weather'
+            )
+          ),
+          React.createElement(
+            'li',
+            null,
+            React.createElement(
+              NavLink,
+              { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+              'About'
+            )
+          ),
+          React.createElement(
+            'li',
+            null,
+            React.createElement(
+              NavLink,
+              { to: '/example', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+              'Example'
+            )
+          )
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'top-bar-right' },
+        React.createElement(
+          'form',
+          { onSubmit: this.onSearch },
+          React.createElement(
+            'ul',
+            { className: 'menu' },
+            React.createElement(
+              'li',
+              null,
+              React.createElement('input', { type: 'search', placeholder: 'Search weather' })
+            ),
+            React.createElement(
+              'li',
+              null,
+              React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
+            )
+          )
+        )
+      )
+    );
+  }
+});
 
 module.exports = Nav;
 
