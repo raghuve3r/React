@@ -23,5 +23,5 @@ app.use(express.static('public'));
 // });
 
 app.listen(PORT, function(){
-  console.log('Port is up on the port '+PORT);
+  console.log('Port is up on duku the port '+PORT);
 });
