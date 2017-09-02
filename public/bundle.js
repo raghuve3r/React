@@ -28741,9 +28741,18 @@ var React = __webpack_require__(6);
 
 var Example = function Example(props) {
   return React.createElement(
-    'h3',
+    'div',
     null,
-    ' Example component '
+    React.createElement(
+      'h3',
+      null,
+      ' Example component '
+    ),
+    React.createElement(
+      'h3',
+      null,
+      'Example'
+    )
   );
 };
 
