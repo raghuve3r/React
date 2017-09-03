@@ -15,10 +15,12 @@
     "express": "^4.15.3",
     "foundation-sites": "^6.4.3",
     "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "sass-loader": "^6.0.6",
     "script-loader": "^0.7.0",
     "style-loader": "^0.18.2"
   },
