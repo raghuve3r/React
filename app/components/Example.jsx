@@ -4,7 +4,7 @@ var {NavLink} = require('react-router-dom');
 var Example = (props) => {
   return (
     <div>
-      <h1 className="text-center"> Example </h1>
+      <h1 className="text-center page-title"> Example </h1>
       <p>Few locations to try out</p>
       <ol>
         <li><NavLink to="/?location=Mysore">Mysore, IN</NavLink></li>

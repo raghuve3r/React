@@ -3,7 +3,7 @@ var React = require('react');
 var About = (props) => {
   return (
       <div>
-        <h1 className="text-center"> About </h1>
+        <h1 className="text-center page-title"> About </h1>
         <p>
           A simple React application using some of the basic feautues of React.This is a non-academic project built in order to understand web application development using React.
         </p>
