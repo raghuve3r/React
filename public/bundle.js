@@ -29277,9 +29277,57 @@ var React = __webpack_require__(6);
 
 var About = function About(props) {
   return React.createElement(
-    'h3',
+    "div",
     null,
-    ' About component '
+    React.createElement(
+      "h1",
+      { className: "text-center" },
+      " About "
+    ),
+    React.createElement(
+      "p",
+      null,
+      "A simple React application using some of the basic feautues of React.This is a non-academic project built in order to understand web application development using React."
+    ),
+    React.createElement(
+      "p",
+      null,
+      "Tools used for building the application are:"
+    ),
+    React.createElement(
+      "ul",
+      null,
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "https://facebook.github.io/react/" },
+          "React"
+        ),
+        " - Javascript framework used for build this application."
+      ),
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "http://openweathermap.org/" },
+          "OpenWeatherMap"
+        ),
+        " - OpenWeatherMap API used for fetching the current weather data on the basis of city name."
+      ),
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "http://foundation.zurb.com/" },
+          "Foundation"
+        ),
+        " - Foundation was used for styling the application."
+      )
+    )
   );
 };
 
