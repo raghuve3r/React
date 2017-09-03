@@ -7,7 +7,8 @@ var About = require('About');
 var Example = require('Example');
 
 //Load foundation
-require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css')
+require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+require('style-loader!css-loader!foundation-sites/dist/css/foundation-float.min.css');
 $(document).foundation();
 
 ReactDOM.render(
