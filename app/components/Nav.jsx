@@ -1,17 +1,25 @@
-var React = require('react');
-var {NavLink} = require('react-router-dom');
+import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 
-var Nav = React.createClass({
-  onSearch: function (e) {
+const history = createBrowserHistory();
+
+class Nav extends Component{
+  onSearch = (e) => {
     e.preventDefault();
-    alert("Not yet setup");
-  },
-  render: function () {
+    const location = this.refs.search.value;
+    const encodedLocation = encodeURIComponent(location);
+    if(location.length > 0){
+      this.refs.search.value = '';
+      history.push('/?location='+encodedLocation);
+    }
+  };
+
+  render() {
     return (
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">
-            <li className="menu-text">Weather Check</li>
             <li>
               <NavLink exact to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</NavLink>
             </li>
@@ -27,7 +35,7 @@ var Nav = React.createClass({
           <form onSubmit={this.onSearch}>
             <ul className="menu">
               <li>
-                <input type="search" placeholder="Search weather by city"/>
+                <input type="search" placeholder="Search weather by city" ref="search"/>
               </li>
               <li>
                 <input type="submit" className="button" value="Get Weather"/>
@@ -38,6 +46,6 @@ var Nav = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Nav;
+export default Nav;

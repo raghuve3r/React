@@ -1,7 +1,11 @@
-var React = require('react');
-var Nav = require('Nav');
+import React, { Component } from 'react';
+import Nav from 'Nav';
 
-var Main = (props) => {
+import 'style-loader!css-loader!foundation-sites/dist/css/foundation.css';
+import 'style-loader!css-loader!foundation-sites/dist/css/foundation.min.css';
+import 'style-loader!css-loader!sass-loader!applicationStyles';
+
+const Main = (props) => {
   return (
     <div>
       <Nav/>
@@ -14,4 +18,4 @@ var Main = (props) => {
   )
 };
 
-module.exports = Main;
+export default Main;

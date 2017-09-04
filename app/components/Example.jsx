@@ -1,17 +1,17 @@
-var React = require('react');
-var {NavLink} = require('react-router-dom');
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
-var Example = (props) => {
+const Example = () => {
   return (
     <div>
       <h1 className="text-center page-title"> Example </h1>
       <p>Few locations to try out</p>
       <ol>
-        <li><NavLink to="/?location=Mysore">Mysore, IN</NavLink></li>
-        <li><NavLink to="/?location=London">London, UK</NavLink></li>
+        <li><Link to="/?location=Mysore">Mysore, IN</Link></li>
+        <li><Link to="/?location=London">London, GB</Link></li>
       </ol>
     </div>
   )
 };
 
-module.exports = Example;
+export default Example;

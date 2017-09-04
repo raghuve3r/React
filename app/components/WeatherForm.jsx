@@ -1,26 +1,26 @@
-var React = require('react');
+import React, {Component} from 'react';
 
-var WeatherForm = React.createClass({
-  onFormSubmit: function (e){
+class WeatherForm extends Component {
+  onFormSubmit = (e) => {
     e.preventDefault();
+    const location = this.refs.location.value;
 
-    var location = this.refs.location.value;
-
-    if(location.length > 0){
+    if (location.length > 0) {
       this.refs.location.value = '';
       this.props.onSearch(location);
     }
-  },
-  render: function() {
-    return(
+  };
+
+  render() {
+    return (
       <div>
         <form onSubmit={this.onFormSubmit}>
-          <input type="search" ref="location" placeholder="Search weather by city"/>
-          <button className="button expanded hollow"> Get Weather </button>
+          <input type="text" ref="location"/>
+          <button className="button expanded hollow">Get Weather</button>
         </form>
       </div>
-    );
+    )
   }
-});
+}
 
-module.exports = WeatherForm;
+export default WeatherForm;

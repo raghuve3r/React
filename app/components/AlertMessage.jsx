@@ -1,20 +1,16 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-var AlertMessage = React.createClass({
-  getDefaultProps: function () {
-    return{
+class AlertMessage extends Component{
+  static defaultProps = {
       title: 'Error'
-    };
-  },
-  propTypes: {
-    title: React.PropTypes.string,
-    message: React.PropTypes.string.isRequired
-  },
-  componentDidMount: function () {
-    var modal = new Foundation.Reveal($('#error-modal'));
+  };
+
+  componentDidMount() {
+    const modal = new Foundation.Reveal($('#error-modal'));
     modal.open();
-  },
-  render: function () {
+  }
+
+  render() {
     var {title,message} = this.props;
     return  (
       <div id="error-modal" className="reveal tiny text-center" data-reveal="">
@@ -26,8 +22,8 @@ var AlertMessage = React.createClass({
             </button>
           </p>
       </div>
-    );
+    )
   }
-});
+}
 
-module.exports = AlertMessage;
+export default AlertMessage;
