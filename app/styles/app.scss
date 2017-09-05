@@ -1,14 +1,37 @@
 $space-large: 3.5rem;
-$title-color: #555;
+$title-color: #2c2d2d;
 
 .page-title {
   margin-top: $space-large;
   margin-bottom: $space-large;
   font-family: 'Baloo Tammudu', cursive;
-  color: black;
+  color: #d6d6d8;
 }
 input[type=search] {
   box-shadow: none;
+}
+
+.table-test {
+  background-color: transparent;
+}
+
+a{
+  color: #d6d6d8 !important;
+}
+
+.button-color {
+  color: white !important;
+  border-color: black !important;
+  font-weight: bold;
+}
+
+.link-color {
+  color: white;
+  font-weight: bold;
+}
+
+.active{
+  color: white !important;
 }
 
 .message-div {
@@ -17,11 +40,21 @@ input[type=search] {
 }
 
 .body-image {
-  background-image: url('img.jpg');
-  display: block;
+  background-image: url('dest.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white !important;
+  text-shadow:
+    -0.3px -0.3px 0 #000,
+    -0.3px -0.3px 0 #000,
+    -0.3px -0.3px 0 #000,
+    -0.3px -0.3px 0 #000;
 }
 
 .top-bar {
-  margin: 0.1rem;
-  color: black;
+  background: black !important;
+  .menu {
+    background: black !important;
+  }
 }

@@ -7,14 +7,14 @@ const WeatherMessage = ({temp, location, country, cond}) => {
   return (
     <div>
       <table>
-        <thead>
+        <tbody className="table-test">
           <tr>
-            <th>Location</th>
-            <th>Temperature</th>
-            <th>Condition</th>
+            <td>Location</td>
+            <td>Temperature</td>
+            <td>Condition</td>
           </tr>
-        </thead>
-        <tbody>
+        </tbody>
+        <tbody className="table-test">
           <tr>
             <td>{loc}, {country}</td>
             <td>{temperature}&deg;C</td>

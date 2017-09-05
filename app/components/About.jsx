@@ -12,13 +12,13 @@ const About = () => {
         </p>
         <ul>
           <li>
-              <a href="https://facebook.github.io/react/">React</a> - Javascript framework used for build this application.
+              <a href="https://facebook.github.io/react/" className="link-color">React</a> - Javascript framework used for build this application.
           </li>
           <li>
-            <a href="http://openweathermap.org/">OpenWeatherMap</a> - OpenWeatherMap API used for fetching the current weather data on the basis of city name.
+            <a href="http://openweathermap.org/" className="link-color">OpenWeatherMap</a> - OpenWeatherMap API used for fetching the current weather data on the basis of city name.
           </li>
           <li>
-            <a href="http://foundation.zurb.com/">Foundation</a> - Foundation was used for styling the application.
+            <a href="http://foundation.zurb.com/" className="link-color">Foundation</a> - Foundation was used for styling the application.
           </li>
         </ul>
       </div>
