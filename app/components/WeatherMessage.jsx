@@ -6,11 +6,11 @@ const WeatherMessage = ({temp, location, country, cond}) => {
   const temperature = Math.round(temp);
   return (
     <div>
-      <table className="unstriped">
+      <table>
         <thead>
           <tr>
-            <th width="100">Location</th>
-            <th width="50">Temperature</th>
+            <th>Location</th>
+            <th>Temperature</th>
             <th>Condition</th>
           </tr>
         </thead>

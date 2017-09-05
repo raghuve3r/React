@@ -28271,19 +28271,20 @@ var Weather = function (_Component) {
   _createClass(Weather, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      //console.log(this.props);
       var locObj = _queryString2.default.parse(this.props.location.search);
       var location = locObj.location;
+      //console.log(location);
       if (location && location.length > 0) {
         this.handleSearch(location);
         this.props.history.push('/');
       }
     }
   }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      var locObj = _queryString2.default.parse(this.props.location.search);
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(newProps) {
+      var locObj = _queryString2.default.parse(newProps.location.search);;
       var location = locObj.location;
-      //console.log(location);
       if (location && location.length > 0) {
         this.handleSearch(location);
         this.props.history.push('/');
@@ -28440,55 +28441,55 @@ var WeatherMessage = function WeatherMessage(_ref) {
   var condition = cond.charAt(0).toUpperCase() + cond.slice(1);
   var temperature = Math.round(temp);
   return _react2.default.createElement(
-    "div",
+    'div',
     null,
     _react2.default.createElement(
-      "table",
-      { className: "unstriped" },
+      'table',
+      null,
       _react2.default.createElement(
-        "thead",
+        'thead',
         null,
         _react2.default.createElement(
-          "tr",
+          'tr',
           null,
           _react2.default.createElement(
-            "th",
-            { width: "100" },
-            "Location"
-          ),
-          _react2.default.createElement(
-            "th",
-            { width: "50" },
-            "Temperature"
-          ),
-          _react2.default.createElement(
-            "th",
+            'th',
             null,
-            "Condition"
+            'Location'
+          ),
+          _react2.default.createElement(
+            'th',
+            null,
+            'Temperature'
+          ),
+          _react2.default.createElement(
+            'th',
+            null,
+            'Condition'
           )
         )
       ),
       _react2.default.createElement(
-        "tbody",
+        'tbody',
         null,
         _react2.default.createElement(
-          "tr",
+          'tr',
           null,
           _react2.default.createElement(
-            "td",
+            'td',
             null,
             loc,
-            ", ",
+            ', ',
             country
           ),
           _react2.default.createElement(
-            "td",
+            'td',
             null,
             temperature,
-            "\xB0C"
+            '\xB0C'
           ),
           _react2.default.createElement(
-            "td",
+            'td',
             null,
             condition
           )
@@ -30058,7 +30059,7 @@ var Nav = function (_Component) {
       var encodedLocation = encodeURIComponent(location);
       if (location.length > 0) {
         _this.refs.search.value = '';
-        history.push('/?location=' + encodedLocation);
+        _this.props.history.push('/?location=' + encodedLocation);
       }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -30133,7 +30134,7 @@ var Nav = function (_Component) {
   return Nav;
 }(_react.Component);
 
-exports.default = Nav;
+exports.default = (0, _reactRouterDom.withRouter)(Nav);
 
 /***/ }),
 /* 280 */

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, withRouter} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 const history = createBrowserHistory();
@@ -11,7 +11,7 @@ class Nav extends Component{
     const encodedLocation = encodeURIComponent(location);
     if(location.length > 0){
       this.refs.search.value = '';
-      history.push('/?location='+encodedLocation);
+      this.props.history.push(`/?location=${encodedLocation}`);
     }
   };
 
@@ -48,4 +48,4 @@ class Nav extends Component{
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

@@ -18,18 +18,19 @@ class Weather extends Component {
   };
 
   componentDidMount() {
+    //console.log(this.props);
     let locObj = queryString.parse(this.props.location.search);
     let location = locObj.location;
+    //console.log(location);
     if (location && location.length > 0) {
       this.handleSearch(location);
       this.props.history.push('/');
     }
   }
 
-  componentDidUpdate() {
-     let locObj = queryString.parse(this.props.location.search);
+  componentWillReceiveProps(newProps) {
+     let locObj = queryString.parse(newProps.location.search);;
      let location = locObj.location;
-     //console.log(location);
      if (location && location.length > 0) {
        this.handleSearch(location);
        this.props.history.push('/');
