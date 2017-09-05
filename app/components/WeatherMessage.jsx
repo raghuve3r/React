@@ -8,7 +8,7 @@ const WeatherMessage = ({temp, location, country, cond}) => {
     <div>
       <table>
         <tbody className="table-test">
-          <tr>
+          <tr className="head-style">
             <td>Location</td>
             <td>Temperature</td>
             <td>Condition</td>

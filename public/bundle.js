@@ -28401,7 +28401,7 @@ var WeatherForm = function (_Component) {
           _react2.default.createElement('input', { type: 'text', ref: 'location' }),
           _react2.default.createElement(
             'button',
-            { className: 'button expanded hollow button-color' },
+            { className: 'button expanded button-active button-color' },
             'Get Weather'
           )
         )
@@ -28451,7 +28451,7 @@ var WeatherMessage = function WeatherMessage(_ref) {
         { className: "table-test" },
         _react2.default.createElement(
           "tr",
-          null,
+          { className: "head-style" },
           _react2.default.createElement(
             "td",
             null,
@@ -28567,7 +28567,7 @@ var AlertMessage = function (_Component) {
           null,
           _react2.default.createElement(
             'button',
-            { className: 'button hollow', 'data-close': '' },
+            { className: 'button hollow alert', 'data-close': '' },
             'Okay'
           )
         )
@@ -30299,7 +30299,7 @@ exports = module.exports = __webpack_require__(41)(undefined);
 
 
 // module
-exports.push([module.i, ".page-title {\n  margin-top: 3.5rem;\n  margin-bottom: 3.5rem;\n  font-family: 'Baloo Tammudu', cursive;\n  color: #d6d6d8; }\n\ninput[type=search] {\n  box-shadow: none; }\n\n.table-test {\n  background-color: transparent; }\n\na {\n  color: #d6d6d8 !important; }\n\n.button-color {\n  color: white !important;\n  border-color: black !important;\n  font-weight: bold; }\n\n.link-color {\n  color: white;\n  font-weight: bold; }\n\n.active {\n  color: white !important; }\n\n.message-div {\n  position: absolute;\n  float: left; }\n\n.body-image {\n  background-image: url(" + __webpack_require__(289) + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n  color: white !important;\n  text-shadow: -0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000; }\n\n.top-bar {\n  background: black !important; }\n  .top-bar .menu {\n    background: black !important; }\n", ""]);
+exports.push([module.i, "input[type=search] {\n  box-shadow: none; }\n\na {\n  color: #d6d6d8 !important; }\n\n.page-title {\n  margin-top: 3.5rem;\n  margin-bottom: 3.5rem;\n  font-family: 'Baloo Tammudu', cursive;\n  color: #d6d6d8; }\n\n.table-test {\n  background-color: rgba(0, 0, 0, 0.5);\n  border-color: black !important; }\n\n.head-style {\n  font-weight: bold; }\n\n.f-dropdown {\n  outline: 1px dotted #333; }\n\n.button-color {\n  color: white !important;\n  background-color: rgba(0, 0, 0, 0.5) !important;\n  font-weight: bold; }\n\n.button:hover {\n  border-color: white !important; }\n\n.link-color {\n  color: white;\n  font-weight: bold; }\n\n.active {\n  color: white !important; }\n\n.message-div {\n  position: absolute;\n  float: left; }\n\n.body-image {\n  background-image: url(" + __webpack_require__(289) + ");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n  color: white !important;\n  text-shadow: -0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000; }\n\n.top-bar {\n  background: black !important; }\n  .top-bar .menu {\n    background: black !important; }\n\n#error-modal {\n  color: black !important; }\n", ""]);
 
 // exports
 

@@ -17,7 +17,7 @@ class AlertMessage extends Component{
           <h4>{title}</h4>
           <p>Error: {message}</p>
           <p>
-            <button className="button hollow" data-close="">
+            <button className="button hollow alert" data-close="">
               Okay
             </button>
           </p>
