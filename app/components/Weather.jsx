@@ -20,7 +20,6 @@ class Weather extends Component {
   componentDidMount() {
     let locObj = queryString.parse(this.props.location.search);
     let location = locObj.location;
-    //console.log(location);
     if (location && location.length > 0) {
       this.handleSearch(location);
       this.props.history.push('/');

@@ -2,25 +2,20 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    'script-loader!jquery/dist/jquery.min.js',
-    'script-loader!foundation-sites/dist/js/foundation.min.js',
-    './app/app.jsx'
+    'script-loader!jquery/dist/jquery.min.js', 'script-loader!foundation-sites/dist/js/foundation.min.js', './app/app.jsx'
   ],
   externals: {
     jquery: 'jQuery'
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery'
-    })
-  ],
+  plugins: [new webpack.ProvidePlugin({'$': 'jquery', 'jQuery': 'jquery'})],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
   },
   resolve: {
-    modules: [__dirname, 'node_modules'],
+    modules: [
+      __dirname, 'node_modules'
+    ],
     alias: {
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
@@ -33,17 +28,20 @@ module.exports = {
       AlertMessage: 'app/components/AlertMessage.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
-    extensions: ['.js','.jsx']
+    extensions: ['.js', '.jsx']
   },
   module: {
     loaders: [
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react','es2015','stage-1']
+          presets: ['react', 'es2015', 'stage-1']
         },
         test: /\.jsx?$/,
         exclude: /(node_module|bower_components)/
+      }, {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       }
     ]
   }

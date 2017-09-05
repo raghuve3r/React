@@ -21,7 +21,7 @@ class Nav extends Component{
         <div className="top-bar-left">
           <ul className="menu">
             <li>
-              <NavLink exact to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</NavLink>
+              <NavLink exact to="/" className="menu-text">Get Weather</NavLink>
             </li>
             <li>
               <NavLink to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</NavLink>
